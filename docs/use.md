@@ -100,12 +100,14 @@ style 支持的语法:
 ```html
 <template>
 	<view :class="[activeClass]" :style="[baseStyles,overridingStyles]"></view>
+	<view :class="{active: list.length > 4}"></view>
 </template>
 
 <script>
 	export default {
 		data() {
 			return {
+                list: [],
                 activeClass: {
                     'active': true,
                     'text-danger': false
